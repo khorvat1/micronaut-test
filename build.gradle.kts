@@ -54,6 +54,18 @@ java {
 }
 
 tasks {
+    compileJava {
+        options.compilerArgs.add("--add-exports=java.desktop/sun.java2d=ALL-UNNAMED")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.awt.datatransfer=ALL-UNNAMED ")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.awt.image=ALL-UNNAMED")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.awt.im=ALL-UNNAMED")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.awt=ALL-UNNAMED")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.font=ALL-UNNAMED")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.java2d.loops=ALL-UNNAMED")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.java2d.opengl=ALL-UNNAMED")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.java2d.pipe=ALL-UNNAMED")
+        options.compilerArgs.add("--add-exports=java.desktop/sun.java2d.cmm.lcms=ALL-UNNAMED")
+    }
     compileKotlin {
         kotlinOptions {
             jvmTarget = "11"
